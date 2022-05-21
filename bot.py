@@ -25,7 +25,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 class ValorantBot(commands.Bot):
-    def __init__(self) -> None:
+    def __init__(self, n) -> None:
         super().__init__(command_prefix='-', case_insensitive=True, intents=intents)
         owner_id = os.getenv('OWNER_ID')
         if owner_id is not None:
